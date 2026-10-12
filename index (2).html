@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Alumni - UPTD SPF SDN Lanto Dg Pasewang</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen py-8 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-3xl mx-auto bg-white p-6 sm:p-10 rounded-2xl shadow-xl">
+    
+    <!-- HEADER LOGO DAN JUDUL -->
+    <div class="text-center border-b pb-6 mb-8">
+      <img src="logo.png" alt="Logo Sekolah" class="w-24 h-24 mx-auto mb-3 object-contain">
+      <h2 class="text-lg font-bold text-blue-800 tracking-wide uppercase">UPTD SPF SDN LANTO DG PASEWANG</h2>
+      <h1 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mt-1">FORMULIR PENDATAAN ALUMNI</h1>
+      <p class="text-sm text-gray-600 mt-2">Mari jalin silaturahmi dan perbarui data keanggotaan alumni sekolah kita.</p>
+    </div>
+
+    <!-- FORMULIR -->
+    <form id="alumniForm" class="space-y-6">
+      
+      <!-- A. IDENTITAS ALUMNI -->
+      <div class="bg-blue-50 p-4 rounded-xl border border-blue-100">
+        <h3 class="text-lg font-bold text-blue-900 mb-4">A. IDENTITAS ALUMNI</h3>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="sm:col-span-2">
+            <label class="block text-sm font-medium text-gray-700">Nama Lengkap *</label>
+            <input type="text" name="nama_lengkap" required class="mt-1 block w-full rounded-md border-gray-300 border p-2 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Nama Panggilan</label>
+            <input type="text" name="nama_panggilan" class="mt-1 block w-full rounded-md border-gray-300 border p-2 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Jenis Kelamin *</label>
+            <select name="jenis_kelamin" required class="mt-1 block w-full rounded-md border-gray-300 border p-2 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+              <option value="">-- Pilih --</option>
+              <option value="Laki-laki">Laki-laki</option>
+              <option value="Perempuan">Perempuan</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Tahun Kelulusan (Angkatan) *</label>
+            <input type="number" name="tahun_kelulusan" placeholder="Contoh: 2018" min="1950" max="2026" required class="mt-1 block w-full rounded-md border-gray-300 border p-2 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700">NISN (Opsional)</label>
+            <input type="text" name="nisn" class="mt-1 block w-full rounded-md border-gray-300 border p-2 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+          </div>
+        </div>
+      </div>
+
+      <!-- B. KONTAK & DOMISILI -->
+      <div class="bg-gray-50 p-4 rounded-xl border border-gray-200">
+        <h3 class="text-lg font-bold text-gray-900 mb-4">B. KONTAK & DOMISILI</h3>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700">No. WhatsApp / HP Active *</label>
+            <input type="tel" name="no_whatsapp" placeholder="08xxxxxxxxxx" required class="mt-1 block w-full rounded-md border-gray-300 border p-2 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Email (Opsional)</label>
+            <input type="email" name="email" class="mt-1 block w-full rounded-md border-gray-300 border p-2 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+          </div>
+
+          <div class="sm:col-span-2">
+            <label class="block text-sm font-medium text-gray-700">Alamat Tempat Tinggal Saat Ini</label>
+            <textarea name="alamat" rows="2" class="mt-1 block w-full rounded-md border-gray-300 border p-2 shadow-sm focus:ring-blue-500 focus:border-blue-500"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- C. AKTIVITAS SAAT INI -->
+      <div class="bg-blue-50 p-4 rounded-xl border border-blue-100">
+        <h3 class="text-lg font-bold text-blue-900 mb-4">C. AKTIVITAS / STATUS SAAT INI</h3>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Status Saat Ini *</label>
+            <select name="status_saat_ini" required class="mt-1 block w-full rounded-md border-gray-300 border p-2 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+              <option value="">-- Pilih Status --</option>
+              <option value="Pelajar SMP/SMA">Pelajar (SMP/SMA/Sederajat)</option>
+              <option value="Mahasiswa">Mahasiswa</option>
+              <option value="Bekerja">Bekerja</option>
+              <option value="Wirausaha">Wirausaha</option>
+              <option value="Lainnya">Lainnya</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Nama Sekolah / Kampus / Instansi Kerja</label>
+            <input type="text" name="instansi_saat_ini" placeholder="Nama sekolah/kampus/kantor" class="mt-1 block w-full rounded-md border-gray-300 border p-2 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+          </div>
+
+          <div class="sm:col-span-2">
+            <label class="block text-sm font-medium text-gray-700">Kesan & Pesan untuk Sekolah</label>
+            <textarea name="kesan_pesan" rows="3" placeholder="Tuliskan kenangan atau harapan Anda untuk SDN Lanto Dg Pasewang..." class="mt-1 block w-full rounded-md border-gray-300 border p-2 shadow-sm focus:ring-blue-500 focus:border-blue-500"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- TOMBOL KIRIM -->
+      <div>
+        <button type="submit" id="submitBtn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg shadow-md transition duration-200">
+          Kirim Data Alumni
+        </button>
+      </div>
+    </form>
+
+    <div id="statusMessage" class="hidden mt-4 p-4 rounded-lg text-center font-semibold"></div>
+  </div>
+
+  <script>
+    const scriptURL = 'URL_GOOGLE_APPS_SCRIPT_ANDA_DI_SINI'; // Tempelkan URL Apps Script di sini
+    const form = document.getElementById('alumniForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const statusMessage = document.getElementById('statusMessage');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.innerText = 'Mengirim Data...';
+
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          statusMessage.classList.remove('hidden', 'bg-red-100', 'text-red-700');
+          statusMessage.classList.add('bg-green-100', 'text-green-700');
+          statusMessage.innerText = 'Terima kasih! Data Alumni Anda berhasil dikirim.';
+          form.reset();
+          submitBtn.disabled = false;
+          submitBtn.innerText = 'Kirim Data Alumni';
+        })
+        .catch(error => {
+          statusMessage.classList.remove('hidden', 'bg-green-100', 'text-green-700');
+          statusMessage.classList.add('bg-red-100', 'text-red-700');
+          statusMessage.innerText = 'Terjadi kesalahan saat mengirim data. Silakan coba lagi.';
+          submitBtn.disabled = false;
+          submitBtn.innerText = 'Kirim Data Alumni';
+        });
+    });
+  </script>
+</body>
+</html>
